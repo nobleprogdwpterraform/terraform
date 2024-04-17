@@ -1,3 +1,5 @@
 variable "filename" {
-    default = "a.txt"
+    type = list(string)
+    default = ["c.txt","d.txt", "e.txt"]
 }
+

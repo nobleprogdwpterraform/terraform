@@ -1,4 +1,4 @@
 variable "filename" {
-    type = l(string)
-    default = ["a.txt"]
+    type = set(string)
+    default = ["b.txt", "c.txt"]
 }
