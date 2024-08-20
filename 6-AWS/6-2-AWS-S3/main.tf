@@ -12,16 +12,16 @@ resource "aws_iam_user" "test-user" {
 
 
 resource "aws_s3_bucket" "finance" {
-    bucket = "${aws_iam_user.test-user.name}1234finance"
+    bucket = "nobleprog1234finance"
     tags = {
       Description = "Finance documents"
     }
 }
 
-/*
+
 resource "aws_s3_object" "upload" {
     bucket = aws_s3_bucket.finance.bucket
     key = "picture"
     source = "picture.jpeg"
 }
-*/
+

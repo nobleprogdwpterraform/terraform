@@ -3,7 +3,7 @@ provider "aws" {
   access_key = ""
   secret_key = ""
 }
-/*
+
 terraform {
   backend "s3" {
     bucket = "nobleprog1234finance"
@@ -14,7 +14,7 @@ terraform {
     secret_key = ""
   }
 }
-*/
+
 
 
 resource "aws_s3_bucket" "finance" {

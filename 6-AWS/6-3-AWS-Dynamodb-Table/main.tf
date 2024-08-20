@@ -6,7 +6,7 @@ provider "aws" {
 }
 
 resource "aws_iam_user" "test-user" {
-    name = ""
+    name = "nobleprog"
 }
 
 resource "aws_dynamodb_table" "dynamodb-table" {
@@ -20,11 +20,10 @@ resource "aws_dynamodb_table" "dynamodb-table" {
 
 }
 
-/*
+
 resource "aws_dynamodb_table_item" "dynamo-table-item"{
     table_name = aws_dynamodb_table.dynamodb-table.name
     hash_key = aws_dynamodb_table.dynamodb-table.hash_key
     item = file("table-item.json")
 }
 
-*/

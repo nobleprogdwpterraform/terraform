@@ -11,3 +11,9 @@ resource "aws_instance" "web-server" {
       Description = terraform.workspace
     }
 }
+
+/*
+terraform workspace list
+terraform workspace new ProjectB
+terraform workspace select ProjectA
+*/

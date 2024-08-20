@@ -11,11 +11,11 @@ resource "aws_instance" "web-server" {
     tags = {
       Description = "EC2 Webserver"
     }
-    #key_name = aws_key_pair.public-key.id
-    #vpc_security_group_ids = [aws_security_group.ssh-access.id]
+    key_name = aws_key_pair.public-key.id
+    vpc_security_group_ids = [aws_security_group.ssh-access.id]
 }
 
-/*
+
 resource "aws_key_pair" "public-key" {
     key_name = "pub-key"
     public_key = file("my-key.pub")
@@ -42,8 +42,8 @@ resource "aws_security_group" "ssh-access" {
 output "public-ip" {
   value = aws_instance.web-server.public_ip
 }
-*/
+
 
 
 #ssh-keygen -b 4097 -t rsa -f my-key
-#ssh -i my-key ubuntu@public_ip
+#ssh -i my-key ubuntu@52.214.148.82
