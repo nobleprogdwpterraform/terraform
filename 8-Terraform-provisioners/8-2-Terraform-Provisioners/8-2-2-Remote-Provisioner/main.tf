@@ -6,13 +6,15 @@ provider "aws" {
 }
 
 resource "aws_instance" "ec2-webserver" {
-  ami = "ami-0c1c30571d2dae5c9"
+  ami = "ami-0c38b837cd80f13bb"
   instance_type = "t2.micro"
 
-  /*provisioner "remote-exec" {
+  /*
+  provisioner "remote-exec" {
     inline = [ "echo 'Remote provisioner success' > /tmp/remote-prov.txt" ]
   }
   */
+  
     connection {
     type = "ssh"
     host = self.public_ip
@@ -49,6 +51,6 @@ resource "aws_security_group" "ssh-access" {
 }
 
 
-#ssh-key gen -b 4097 -t rsa -f my-key
+#ssh-keygen -b 4097 -t rsa -f my-key
 # ssh -i my-key ubuntu@pubilic_ip
 # cat /tmp/remote-prov.txt

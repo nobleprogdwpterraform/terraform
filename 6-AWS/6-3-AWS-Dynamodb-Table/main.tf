@@ -1,11 +1,16 @@
 
+provider "aws" {
+  region     = "eu-west-1"
+  access_key = ""
+  secret_key = ""
+}
 
-data "aws_iam_user" "test-user" {
-    user_name = ""
+resource "aws_iam_user" "test-user" {
+    name = ""
 }
 
 resource "aws_dynamodb_table" "dynamodb-table" {
-    name =  "${data.aws_iam_user.test-user.user_name}-cars"
+    name =  "${aws_iam_user.test-user.name}-cars"
     hash_key = "VIN"
     billing_mode = "PAY_PER_REQUEST"
     attribute {

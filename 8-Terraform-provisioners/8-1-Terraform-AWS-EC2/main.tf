@@ -7,7 +7,7 @@ provider "aws" {
 
 resource "aws_instance" "web-server" {
     instance_type = "t2.micro"
-    ami = "ami-0c1c30571d2dae5c9"
+    ami = "ami-0c38b837cd80f13bb"
     tags = {
       Description = "EC2 Webserver"
     }
@@ -42,8 +42,8 @@ resource "aws_security_group" "ssh-access" {
 output "public-ip" {
   value = aws_instance.web-server.public_ip
 }
-
 */
 
-#ssh-key gen -b 4097 -t rsa -f my-key
+
+#ssh-keygen -b 4097 -t rsa -f my-key
 #ssh -i my-key ubuntu@public_ip
