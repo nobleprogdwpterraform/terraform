@@ -7,15 +7,15 @@ provider "aws" {
 
 resource "aws_instance" "web-server" {
     instance_type = "t2.micro"
-    ami = "ami-0c38b837cd80f13bb"
+    ami = "ami-0c1c30571d2dae5c9"
     tags = {
       Description = "EC2 Webserver"
     }
-    key_name = aws_key_pair.public-key.id
-    vpc_security_group_ids = [aws_security_group.ssh-access.id]
+    #key_name = aws_key_pair.public-key.id
+    #vpc_security_group_ids = [aws_security_group.ssh-access.id]
 }
 
-
+/*
 resource "aws_key_pair" "public-key" {
     key_name = "pub-key"
     public_key = file("my-key.pub")
@@ -43,7 +43,7 @@ output "public-ip" {
   value = aws_instance.web-server.public_ip
 }
 
+*/
 
-
-#ssh-keygen -b 4097 -t rsa -f my-key
-#ssh -i my-key ubuntu@52.214.148.82
+#ssh-key gen -b 4097 -t rsa -f my-key
+#ssh -i my-key ubuntu@public_ip
