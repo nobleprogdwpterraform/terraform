@@ -20,15 +20,15 @@ variable "prefix-list" {
 variable "prefix-set" {
   type = set(string)
   description = "prefix list"
-  default = [ "Mr.","Mrs.", "Sir" ]
+  default = [ "Mr.","Mrs.", "Sir"]
 }
 
 variable "file-content" {
   type = map(string)
   description = "prefix list"
   default = {
-    "statement1": "We love pets",
-    "statement2": "I love pets"
+    "statement1": "STATEMENT 1",
+    "statement2": "STATEMENT 2"  
   }
 }
 

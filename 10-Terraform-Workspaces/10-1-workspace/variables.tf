@@ -1,12 +1,15 @@
-variable "ami" {
-  type = string
+variable "app_region" {
+  type = map(string)
   default = {
-    "ProjectA" = "ami-e333fdf",
-    "ProjectB" = "ami-dfdkfer3ff"
+    "ProjectA" = "eu-west-1",
+    "ProjectB" = "us-west-1"
   }
 }
 
-variable "app_region" {
-  type = string
-  default = "ca-central-1"
+variable "ami" {
+  type = map(string)
+  default = {
+    "ProjectA" = "ami-0c38b837cd80f13bb",
+    "ProjectB" = "ami-0ff591da048329e00"
+  }
 }

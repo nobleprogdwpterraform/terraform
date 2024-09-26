@@ -1,6 +1,8 @@
-module "US-Payroll-App" {
+module "UK-Payroll-App" {
     source = "../modules/payroll-app"
     app_region = "eu-west-1"
-    ami = "ami-0c1c30571d2dae5c9"
-    bucket = "sahdev-bucket"
+    ami = "ami-0c38b837cd80f13bb"
+    bucket = "nobleprog1234-uk-bucket"
+    access_key=""
+    secret_key=""
 }

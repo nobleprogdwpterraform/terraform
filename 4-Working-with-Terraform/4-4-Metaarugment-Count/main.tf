@@ -1,5 +1,6 @@
 resource "local_file" "pets" {
-  filename = var.filename
+  filename = var.filename[count.index]
   content = "We love pets"
-  count = 2
+
+  count = length(var.filename)
 }

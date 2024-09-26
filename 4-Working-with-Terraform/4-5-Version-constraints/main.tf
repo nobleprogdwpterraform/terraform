@@ -3,6 +3,7 @@ terraform {
   required_providers {
     local = {
         source = "hashicorp/local"
+        version = "<2.5.1, > 2.3.0, !=2.4.0"
     }
   }
 }
