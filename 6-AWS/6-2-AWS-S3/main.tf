@@ -1,10 +1,15 @@
 
-
-data "aws_iam_user" "test-user" {
-    name=
+provider "aws" {
+  region = "eu-north-1"
+  access_key = "AKIA5CBDRLCAUGEWUNZL"
+  secret_key = "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"
 }
 
-/*
+data "aws_iam_user" "test-user" {
+    user_name="sahdev-user"
+}
+
+
 resource "aws_s3_bucket" "finance" {
     bucket = "${data.aws_iam_user.test-user.user_name}1234finance"
     tags = {
@@ -12,12 +17,11 @@ resource "aws_s3_bucket" "finance" {
     }
 }
 
-*/
 
-/*
+
+
 resource "aws_s3_object" "upload" {
     bucket = aws_s3_bucket.finance.bucket
     key = "picture"
     source = "picture.jpeg"
 }
-*/

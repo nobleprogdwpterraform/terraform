@@ -1,18 +1,16 @@
 provider "aws" {
-    access_key = ""
-    secret_key = ""
-    region = "eu-west-1"
-  
+  region = "eu-north-1"
+  access_key = "AKIA5CBDRLCAUGEWUNZL"
+  secret_key = "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"
 }
-
 resource "aws_instance" "ec2-webserver" {
-  ami = "ami-0c1c30571d2dae5c9"
-  instance_type = "t2.micro"
+    instance_type = "t3.micro"
+    ami = "ami-09a9858973b288bdd"
 
-  /*provisioner "remote-exec" {
+  provisioner "remote-exec" {
     inline = [ "echo 'Remote provisioner success' > /tmp/remote-prov.txt" ]
   }
-  */
+  
     connection {
     type = "ssh"
     host = self.public_ip
@@ -26,12 +24,12 @@ resource "aws_instance" "ec2-webserver" {
 
 
 resource "aws_key_pair" "public-key" {
-    key_name = "pub-key"
+    key_name = "sahdev-user-1-pub-key"
     public_key = file("my-key.pub")
 }
 
 resource "aws_security_group" "ssh-access" {
-  name = "ssh-access"
+  name = "sahdev-user-1-ssh-access"
   description = "SSH access to web-server"
   ingress  {
     from_port = 22
@@ -49,6 +47,6 @@ resource "aws_security_group" "ssh-access" {
 }
 
 
-#ssh-key gen -b 4097 -t rsa -f my-key
-# ssh -i my-key ubuntu@pubilic_ip
+#ssh-keygen -b 4096 -t rsa -f my-key
+# ssh -i my-key ubuntu@13.48.43.229
 # cat /tmp/remote-prov.txt

@@ -1,16 +1,20 @@
+
 provider "aws" {
-  access_key = ""
-  secret_key = ""
-  region = "eu-west-1"
+  region = "eu-north-1"
+  access_key = "AKIA5CBDRLCAUGEWUNZL"
+  secret_key = "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"
 }
 
 resource "aws_instance" "ec2-server" {
-    ami = "ami-0c1c30571d2dae5c9"
-    instance_type = "t2.micro"
+    instance_type = "t3.micro"
+    ami = "ami-09a9858973b288bdd"
 
     provisioner "local-exec" {
         on_failure = fail # default behaviour
-      command = "echo EC2 server ${aws_instance.ec2-server.public_ip} created > temp/ip-address.txt"
+      command = "echo EC2 server ${aws_instance.ec2-server.public_ip} created > ip-address.txt"
     }
   
 }
+
+# terraform untaint aws_instance.ec2-server (to untaint a previously tainted resource)
+# terraform taint aws_instance.ec2-server (to taint a resource)

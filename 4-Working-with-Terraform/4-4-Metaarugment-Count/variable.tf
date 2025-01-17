@@ -1,7 +1,7 @@
 variable "filename" {
-    #type = list(string)
-    #default = ["c.txt","d.txt", "e.txt"]
-    type = string
-    default = "a.txt"
+    type = list(string)
+    default = ["d.txt","e.txt"]
+    #type = string
+    #default = "a.txt"
 }
 
