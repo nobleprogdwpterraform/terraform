@@ -1,32 +1,28 @@
 provider "aws" {
-  region     = "eu-west-1"
+  region = "eu-north-1"
   access_key = ""
   secret_key = ""
 }
 
+
 terraform {
   backend "s3" {
-    bucket = "nobleprog1234finance"
+    bucket = "sahdev-user1234finance"
     key = "state/terraform.tfstate"
-    dynamodb_table = "nobleprog-state-locking"
-    region = "eu-west-1"
-   access_key = ""
-    secret_key = ""
+    dynamodb_table = "sahdev-user-state-locking"
+    region = "eu-north-1"
+    access_key = "AKIA5CBDRLCAUGEWUNZL"
+    secret_key = "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"
   }
 }
 
 
-
-resource "aws_s3_bucket" "finance" {
-    bucket = "nobleprog1234finance"
-    tags = {
-      Description = "Finance documents"
-    }
+data "aws_iam_user" "test-user" {
+    user_name = "sahdev-user"
 }
 
-
 resource "aws_dynamodb_table" "state-locking" {
-    name = "nobleprog-state-locking"
+    name = "${data.aws_iam_user.test-user.user_name}-state-locking"
     billing_mode = "PAY_PER_REQUEST"
     hash_key = "LockID"
 

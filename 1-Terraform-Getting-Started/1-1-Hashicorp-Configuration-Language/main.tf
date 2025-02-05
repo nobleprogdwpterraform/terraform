@@ -1,4 +1,4 @@
-resource "local_file" "hcl-basic" {
+resource "local_file" "my-pets" {
     filename = "pets.txt"
-    content = "I love animal"
+    content = "We love pets."
 }

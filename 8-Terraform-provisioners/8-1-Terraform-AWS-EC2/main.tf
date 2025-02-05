@@ -1,13 +1,13 @@
+
 provider "aws" {
-  region     = "eu-west-1"
+  region = "eu-north-1"
   access_key = ""
   secret_key = ""
 }
 
-
 resource "aws_instance" "web-server" {
-    instance_type = "t2.micro"
-    ami = "ami-0c38b837cd80f13bb"
+    instance_type = "t3.micro"
+    ami = "ami-09a9858973b288bdd"
     tags = {
       Description = "EC2 Webserver"
     }
@@ -17,12 +17,12 @@ resource "aws_instance" "web-server" {
 
 
 resource "aws_key_pair" "public-key" {
-    key_name = "pub-key"
+    key_name = "sahdev-user-pub-key"
     public_key = file("my-key.pub")
 }
 
 resource "aws_security_group" "ssh-access" {
-  name = "ssh-access"
+  name = "sahdev-user-ssh-access"
   description = "SSH access to web-server"
   ingress  {
     from_port = 22
@@ -39,11 +39,12 @@ resource "aws_security_group" "ssh-access" {
   }
 }
 
+
 output "public-ip" {
   value = aws_instance.web-server.public_ip
 }
 
 
 
-#ssh-keygen -b 4097 -t rsa -f my-key
-#ssh -i my-key ubuntu@52.214.148.82
+#ssh-keygen -b 4096 -t rsa -f my-key
+#ssh -i my-key ubuntu@13.60.13.102

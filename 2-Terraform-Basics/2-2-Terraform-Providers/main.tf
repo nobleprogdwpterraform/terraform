@@ -1,11 +1,6 @@
-resource "local_sensitive_file" "pets" {
-  filename = "pets.txt"
-  content = "I Love Pets"
-}
-
-# There 3 types of providers:
+# There are 3 type of providers:
 /*
-1. Official: maintained by hashicorp itself
-2. Partner: Partner tech companies
-3. Community provider: Maintained by individuals, not officially supported by hashicorp
+1. Official: maintained by terraform itself
+2. Partner: partner tech companies
+3. Community Providers: maintained by individual users
 */

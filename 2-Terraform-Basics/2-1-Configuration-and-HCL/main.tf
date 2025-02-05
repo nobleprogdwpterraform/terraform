@@ -1,7 +1,5 @@
 
-resource "local_sensitive_file" "pets" {
+resource "local_file" "pets" {
   filename = "pets.txt"
-  content = "I Love Pets"
+  content = "we love pets"
 }
-
-# Terraform registry documentation https://registry.terraform.io/

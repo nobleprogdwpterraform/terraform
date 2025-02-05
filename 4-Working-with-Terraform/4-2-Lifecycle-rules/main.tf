@@ -1,15 +1,17 @@
 resource "local_file" "pets" {
-  filename = "pets.txt"
-  content = random_string.string.id
+  filename = "my-pets.txt"
+  content  = "new content"
   lifecycle {
-    create_before_destroy=true
+    create_before_destroy = true
   }
+
 }
 
 
 resource "random_string" "string" {
-  length  = var.length
+  length = var.length
   lifecycle {
-    create_before_destroy=true
+    create_before_destroy = true
+    prevent_destroy       = true
   }
 }

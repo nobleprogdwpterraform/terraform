@@ -1,12 +1,12 @@
 
-resource "random_string" "new-string" {
-    length = 5
-}
 
 /*
-1. terraform state list
-2. terraform state show random_string.string
-3. terraform state mv random_string.string random_string.new-string
-4. terraform state pull
-5. terraform state rm random_string.string
+1. terraform state --help
+2. terraform state list (list all the resource names)
+3. terraform state list random_string.string (list the resource name only) 
+4. terraform state show random_string.string (show all attributes of the resource)
+5. terraform state mv random_string.string random_string.new-string-name (rename the resource)
+6. terraform state pull (pulls latest state file)
+7. terraform state rm random_string.string (removes the resource from state file)
+
 */
