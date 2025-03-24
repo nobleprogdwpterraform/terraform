@@ -11,8 +11,8 @@ terraform {
     key = "state/terraform.tfstate"
     dynamodb_table = "sahdev-user-state-locking"
     region = "eu-north-1"
-    access_key = "AKIA5CBDRLCAUGEWUNZL"
-    secret_key = "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"
+    access_key = ""
+    secret_key = ""
   }
 }
 

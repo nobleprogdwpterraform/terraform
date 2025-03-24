@@ -10,6 +10,7 @@ resource "aws_iam_user" "test-user" {
   name = "sahdev-user"
 } 
 
+/*
 
 resource "aws_iam_policy" "list-user-policy" {
   name   = "Sahdev-ListUserPolicy"
@@ -40,3 +41,4 @@ resource "aws_iam_user_policy_attachment" "test-user-list-user" {
     user = aws_iam_user.test-user.name
     policy_arn = aws_iam_policy.list-user-policy.arn
 }
+*/
