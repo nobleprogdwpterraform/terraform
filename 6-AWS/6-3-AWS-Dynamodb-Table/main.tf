@@ -8,6 +8,7 @@ data "aws_iam_user" "test-user" {
     user_name = "sahdev-user"
 }
 
+/*
 resource "aws_dynamodb_table" "dynamodb-table" {
     name =  "${data.aws_iam_user.test-user.user_name}-cars"
     hash_key = "VIN"
@@ -25,4 +26,6 @@ resource "aws_dynamodb_table_item" "dynamo-table-item"{
     hash_key = aws_dynamodb_table.dynamodb-table.hash_key
     item = file("table-item.json")
 }
+
+*/
 

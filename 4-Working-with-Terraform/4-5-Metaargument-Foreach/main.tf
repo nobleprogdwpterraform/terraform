@@ -1,5 +1,5 @@
 resource "local_file" "pets" {
-  filename = 
+  filename =  var.filename
   content = "We love pets"
   
 }
