@@ -47,4 +47,4 @@ output "public-ip" {
 
 
 #ssh-keygen -b 4096 -t rsa -f my-key
-#ssh -i my-key ubuntu@13.60.13.102
+#ssh -i my-key ubuntu@<ip_address>

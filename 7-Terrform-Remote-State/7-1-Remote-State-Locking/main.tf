@@ -4,6 +4,7 @@ provider "aws" {
   secret_key = ""
 }
 
+/*
 
 terraform {
   backend "s3" {
@@ -15,7 +16,7 @@ terraform {
     secret_key = ""
   }
 }
-
+*/
 
 data "aws_iam_user" "test-user" {
     user_name = "sahdev-user"
