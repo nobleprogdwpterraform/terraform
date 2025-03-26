@@ -1,7 +1,7 @@
 
 resource "local_file" "file" {
   filename = "pets.txt"
-  content = "This file is create at"
+  content = time_static.timestamp.id
 }
 
 resource "time_static" "timestamp" {

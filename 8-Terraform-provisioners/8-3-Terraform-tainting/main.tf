@@ -1,17 +1,17 @@
 
 provider "aws" {
   region = "eu-north-1"
-  access_key = ""
-  secret_key = ""
+  access_key = "AKIA5CBDRLCAVNGBW7OP"
+  secret_key = "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"
 }
 
 resource "aws_instance" "ec2-server" {
     instance_type = "t3.micro"
-    ami = "ami-09a9858973b288bdd"
+    ami = "ami-0c1ac8a41498c1a9c"
 
     provisioner "local-exec" {
-        on_failure = fail # default behaviour
-      command = "echo EC2 server ${aws_instance.ec2-server.public_ip} created > ip-address.txt"
+        on_failure = continue # default behaviour
+      command = "echo EC2 server ${aws_instance.ec2-server.public_ip} created > temp/ip-address.txt"
     }
   
 }

@@ -1,25 +1,25 @@
 provider "aws" {
   region = "eu-north-1"
-  access_key = ""
-  secret_key = ""
+  access_key = "AKIA5CBDRLCAVNGBW7OP"
+  secret_key = "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"
 }
 
-/*
+
 
 terraform {
   backend "s3" {
-    bucket = "sahdev-user1234finance"
+    bucket = "terraform1234finance" 
     key = "state/terraform.tfstate"
-    dynamodb_table = "sahdev-user-state-locking"
+    dynamodb_table = "terraform-state-locking"
     region = "eu-north-1"
-    access_key = ""
-    secret_key = ""
+    access_key = "AKIA5CBDRLCAVNGBW7OP"
+    secret_key = "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"
   }
 }
-*/
+
 
 data "aws_iam_user" "test-user" {
-    user_name = "sahdev-user"
+    user_name = "terraform"
 }
 
 resource "aws_dynamodb_table" "state-locking" {

@@ -14,7 +14,7 @@ variable "length" {
 variable "prefix-list" {
   type = list(string)
   description = "prefix list"
-  default = [ "Mr.","Mrs.", "Sir" ]
+  default = [ "Mr.","Mrs.", "Sir", "Sir" ]
 }
 
 variable "prefix-set" {

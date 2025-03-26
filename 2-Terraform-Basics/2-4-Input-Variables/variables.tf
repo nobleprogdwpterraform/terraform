@@ -3,5 +3,5 @@ variable "filename" {
 }
 
 variable "file-content" {
-  default = "We love pets"
+  default = "I love pets"
 }

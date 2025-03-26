@@ -1,14 +1,14 @@
 provider "aws" {
   region = "eu-north-1"
-  access_key = ""
-  secret_key = ""
+  access_key = "AKIA5CBDRLCAVNGBW7OP"
+  secret_key = "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"
 }
 
 data "aws_iam_user" "test-user" {
-    user_name = "sahdev-user"
+    user_name = "terraform"
 }
 
-/*
+
 resource "aws_dynamodb_table" "dynamodb-table" {
     name =  "${data.aws_iam_user.test-user.user_name}-cars"
     hash_key = "VIN"
@@ -21,11 +21,12 @@ resource "aws_dynamodb_table" "dynamodb-table" {
 }
 
 
+
 resource "aws_dynamodb_table_item" "dynamo-table-item"{
     table_name = aws_dynamodb_table.dynamodb-table.name
     hash_key = aws_dynamodb_table.dynamodb-table.hash_key
     item = file("table-item.json")
 }
 
-*/
+
 
