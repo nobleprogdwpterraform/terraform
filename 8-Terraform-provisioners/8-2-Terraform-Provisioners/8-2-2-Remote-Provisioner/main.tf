@@ -1,7 +1,7 @@
 provider "aws" {
   region = "eu-north-1"
-  access_key = "AKIA5CBDRLCAVNGBW7OP"
-  secret_key = "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"
+  access_key = ""
+  secret_key = ""
 }
 resource "aws_instance" "ec2-webserver" {
     instance_type = "t3.micro"

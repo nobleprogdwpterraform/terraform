@@ -1,7 +1,7 @@
 provider "aws" {
   region = "eu-north-1"
-  access_key = "AKIA5CBDRLCAVNGBW7OP"
-  secret_key = "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"
+  access_key = ""
+  secret_key = ""
 }
 
 
@@ -12,8 +12,8 @@ terraform {
     key = "state/terraform.tfstate"
     dynamodb_table = "terraform-state-locking"
     region = "eu-north-1"
-    access_key = "AKIA5CBDRLCAVNGBW7OP"
-    secret_key = "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"
+    access_key = ""
+    secret_key = ""
   }
 }
 

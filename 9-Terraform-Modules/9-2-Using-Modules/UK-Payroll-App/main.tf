@@ -1,8 +1,8 @@
 
 provider "aws" {
   region = "eu-west-1"
-  access_key = "AKIA5CBDRLCAVNGBW7OP"
-  secret_key = "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"
+  access_key = ""
+  secret_key = ""
 }
 
 module "UK-Payroll-App" {
