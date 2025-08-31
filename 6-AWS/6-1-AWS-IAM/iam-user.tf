@@ -11,7 +11,7 @@ resource "aws_iam_user" "test-user" {
 } 
 
 
-
+/*
 resource "aws_iam_policy" "list-user-policy" {
   name   = "terraform-ListUserPolicy"
   policy = <<EOF
@@ -42,3 +42,4 @@ resource "aws_iam_user_policy_attachment" "test-user-list-user" {
     policy_arn = aws_iam_policy.list-user-policy.arn
 }
 
+*/

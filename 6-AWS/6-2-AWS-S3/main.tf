@@ -9,7 +9,7 @@ data "aws_iam_user" "test-user" {
     user_name="terraform"
 }
 
-
+/*
 resource "aws_s3_bucket" "finance" {
     bucket = "${data.aws_iam_user.test-user.user_name}1234finance"
     tags = {
@@ -25,3 +25,4 @@ resource "aws_s3_object" "upload" {
     key = "picture"
     source = "picture.jpeg"
 }
+*/

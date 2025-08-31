@@ -1,7 +1,7 @@
 
 resource "local_file" "pets" {
-  filename = "pets.txt"
-  content = "I Love pets!"
+  filename = ""
+  content = ""
 }
 
 resource "local_sensitive_file" "foo" {

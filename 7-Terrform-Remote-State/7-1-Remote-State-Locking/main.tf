@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 
-
+/*
 terraform {
   backend "s3" {
     bucket = "terraform1234finance" 
@@ -16,7 +16,7 @@ terraform {
     secret_key = ""
   }
 }
-
+*/
 
 data "aws_iam_user" "test-user" {
     user_name = "terraform"
