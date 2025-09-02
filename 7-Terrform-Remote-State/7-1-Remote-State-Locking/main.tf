@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 
-/*
+
 terraform {
   backend "s3" {
     bucket = "terraform1234finance" 
@@ -16,10 +16,17 @@ terraform {
     secret_key = ""
   }
 }
-*/
+
 
 data "aws_iam_user" "test-user" {
     user_name = "terraform"
+}
+
+resource "aws_s3_bucket" "finance" {
+    bucket = "${data.aws_iam_user.test-user.user_name}1234finance"
+    tags = {
+      Description = "Finance documents"
+    }
 }
 
 resource "aws_dynamodb_table" "state-locking" {

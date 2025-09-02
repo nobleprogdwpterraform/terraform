@@ -5,6 +5,18 @@ provider "aws" {
 }
 
 resource "aws_instance" "ec2-server" {
+    ami = "ami-0c4fc5dcabc9df21d"
+    instance_type = "t3.micro"
+    security_groups = ["launch-wizard-1"]
+    vpc_security_group_ids = ["sg-03577d27b42c6b06e"]
+    tags = {
+      Name = "sahdev-web-server"
+    }
+}
+
+
+/*
+resource "aws_instance" "ec2-server" {
     ami = "ami-0c1ac8a41498c1a9c"
     instance_type = "t3.micro"
     security_groups = ["default"]
@@ -13,7 +25,7 @@ resource "aws_instance" "ec2-server" {
       Name = "nobleprog-web-server"
     }
 }
-
+*/
 /*
 resource "aws_instance" "ec2-server" {
     ami = "ami-09a9858973b288bdd"
@@ -27,4 +39,4 @@ resource "aws_instance" "ec2-server" {
 */
 
 
-#terraform import aws_instance.ec2-server i-045aae0a458086451 (to import a resource under terraform)
+#terraform import aws_instance.ec2-server i-013cf9a49a86f3da6 (to import a resource under terraform)

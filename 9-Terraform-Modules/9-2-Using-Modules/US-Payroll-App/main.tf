@@ -8,5 +8,6 @@ provider "aws" {
 module "US-Payroll-App" {
     source = "../modules/payroll-app"
     app_region = "us-east-1"
-    ami = "ami-084568db4383264d4"
+    ami = "ami-00ca32bbc84273381"
+    bucket = "nobleprog-user-bucket"
 }

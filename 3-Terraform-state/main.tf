@@ -1,6 +1,6 @@
 resource "local_file" "pets" {
   filename = "pets.txt"
-  content = "I love pets!"
+  content = "We love pets!"
 }
 
 resource "random_pet" "pet-name" {

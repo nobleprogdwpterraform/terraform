@@ -10,7 +10,7 @@ resource "aws_security_group" "example" {
   name = "terraform_sg"
 
   dynamic "ingress" {
-    for_each = var.ingress_rules
+    for_each = var.ingress_rules # 2 iterations
     content {
       from_port   = ingress.value.from_port
       to_port     = ingress.value.to_port
@@ -20,7 +20,7 @@ resource "aws_security_group" "example" {
   }
 
   dynamic "egress" {
-    for_each = var.egress_rules
+    for_each = var.egress_rules # 1 iteration
     content {
       from_port   = egress.value.from_port
       to_port     = egress.value.to_port

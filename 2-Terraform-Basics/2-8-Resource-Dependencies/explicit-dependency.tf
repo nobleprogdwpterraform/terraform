@@ -1,9 +1,9 @@
 
-
+/*
 resource "local_file" "file" {
   filename = "pets.txt"
   content = "My fav pet is Cat"
-  depends_on = []
+  depends_on = [random_pet.pet]
 }
 
 resource "random_pet" "pet" {
@@ -16,3 +16,4 @@ resource "time_static" "timestamp" {
   
 }
 
+*/

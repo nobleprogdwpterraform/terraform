@@ -1,7 +1,7 @@
 
 resource "local_file" "pets" {
-  filename = ""
-  content = ""
+  filename = "pets.txt"
+  content = "i love pets"
 }
 
 resource "local_sensitive_file" "foo" {
@@ -9,6 +9,10 @@ resource "local_sensitive_file" "foo" {
   filename = "foo.txt"
 }
 
+/*
+Terraform registry documentation: https://registry.terraform.io/
+
+*/
 /*
 local_file = local is the provider and file is the resource type
 1. Write the  configuration file_permission

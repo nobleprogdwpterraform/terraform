@@ -7,7 +7,7 @@ provider "aws" {
 
 resource "aws_instance" "web-server" {
     instance_type = "t3.micro"
-    ami = "ami-0c1ac8a41498c1a9c"
+    ami = "ami-0c4fc5dcabc9df21d"
     tags = {
       Description = "EC2 Webserver - nobleprog"
     }
@@ -18,12 +18,12 @@ resource "aws_instance" "web-server" {
 
 
 resource "aws_key_pair" "public-key" {
-    key_name = "nobleprog-pub-key"
+    key_name = "sahdev-pub-key"
     public_key = file("my-key.pub")
 }
 
 resource "aws_security_group" "ssh-access" {
-  name = "nobleprog-ssh-access"
+  name = "sahdev-ssh-access"
   description = "SSH access to web-server"
   ingress  {
     from_port = 22
@@ -49,4 +49,4 @@ output "public-ip" {
 
 
 #ssh-keygen -b 4096 -t rsa -f my-key
-#ssh -i my-key ubuntu@<ip_address>
+#ssh -i my-key ec2-user@16.171.198.155

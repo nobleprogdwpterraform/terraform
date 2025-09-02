@@ -3,6 +3,6 @@ variable "filename" {
     #default = "a.txt"
 
     type = list(string)
-    default = ["c.txt"]
+    default = ["c.txt", "e.txt"]
 }
 
