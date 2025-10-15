@@ -7,3 +7,18 @@ resource "local_file" "pets" {
 output "filename" {
   value = local_file.pets.filename
 }
+
+
+/*
+Terraform commands:
+terraform init
+terraform plan
+terraform apply
+
+terrafrom validate  (validates the configuration) 
+terraform fmt (formats the configuration)
+terraform show (shows the resources along with thier attributes and output variables)
+terraform providers (show all the providers)
+terraform output (to display output variables and values)
+
+*/

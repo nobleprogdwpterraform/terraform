@@ -1,19 +1,19 @@
 
 provider "aws" {
   region = "eu-north-1"
-  access_key = ""
-  secret_key = ""
+  access_key = "AKIA5CBDRLCAW5T4NRXA"
+  secret_key = "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"
 }
 
 
 resource "aws_iam_user" "test-user" {
-  name = "terraform"
+  name = "sahdev"
 } 
 
 
-/*
+
 resource "aws_iam_policy" "list-user-policy" {
-  name   = "terraform-ListUserPolicy"
+  name   = "sahdev-ListUserPolicy"
   policy = <<EOF
 
 {
@@ -42,4 +42,3 @@ resource "aws_iam_user_policy_attachment" "test-user-list-user" {
     policy_arn = aws_iam_policy.list-user-policy.arn
 }
 
-*/

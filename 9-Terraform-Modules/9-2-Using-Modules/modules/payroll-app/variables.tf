@@ -8,5 +8,5 @@ variable "app_region" {
 
 variable "bucket" {
   type = string
-  default = "payroll-app-default-bucket"
+  default = "payroll-app-default-bucket-sahdev"
 }

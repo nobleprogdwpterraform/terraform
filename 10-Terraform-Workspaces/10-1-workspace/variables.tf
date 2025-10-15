@@ -1,8 +1,8 @@
 variable "ami" {
   type = map(string)
   default = {
-    "ProjectA" = "ami-084568db4383264d4",
-    "ProjectB" = "ami-08b5b3a93ed654d19"
+    "ProjectA" = "ami-0360c520857e3138f",
+    "ProjectB" = "ami-0cfde0ea8edd312d4"
   }
 }
 

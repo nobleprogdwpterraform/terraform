@@ -1,7 +1,7 @@
 
 resource "local_file" "pets" {
   filename = var.filename
-  content = 
+  content = lookup(var.file-content,"statement1")
 }
 
 /*

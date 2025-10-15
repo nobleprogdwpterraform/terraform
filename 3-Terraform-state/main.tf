@@ -3,8 +3,3 @@ resource "local_file" "pets" {
   content = "I love pets!"
 }
 
-resource "random_pet" "pet-name" {
-  prefix = "Mr"
-  length = 1
-  separator = "."
-}

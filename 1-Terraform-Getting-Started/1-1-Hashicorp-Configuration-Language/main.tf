@@ -1,4 +1,4 @@
 resource "local_file" "my-pets" {
-    filename = ""
-    content = ""
+    filename = "pets.txt"
+    content = "I love pets"
 }

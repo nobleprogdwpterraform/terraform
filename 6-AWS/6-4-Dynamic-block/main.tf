@@ -7,7 +7,7 @@ provider "aws" {
 
 
 resource "aws_security_group" "example" {
-  name = "terraform_sg"
+  name = "sahdev_sg"
 
   dynamic "ingress" {
     for_each = var.ingress_rules

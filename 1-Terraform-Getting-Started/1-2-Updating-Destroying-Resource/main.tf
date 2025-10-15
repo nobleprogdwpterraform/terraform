@@ -1,5 +1,5 @@
 resource "local_file" "hcl-basic" {
-    filename = ""
-    content = ""
-    file_permission = ""
+    filename = "pets.txt"
+    content = "I love pets"
+    file_permission = "0700"
 }

@@ -1,4 +1,4 @@
 variable "length" {
-  default = 8
+  default = 1
 
 }

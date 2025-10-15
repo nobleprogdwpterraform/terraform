@@ -5,21 +5,21 @@ provider "aws" {
 }
 
 
-/*
+
 terraform {
   backend "s3" {
-    bucket = "terraform1234finance" 
+    bucket = "sahdev1234finance" 
     key = "state/terraform.tfstate"
-    dynamodb_table = "terraform-state-locking"
+    dynamodb_table = "sahdev-state-locking"
     region = "eu-north-1"
     access_key = "AKIA5CBDRLCAW5T4NRXA"
     secret_key = "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"
   }
 }
-*/
+
 
 data "aws_iam_user" "test-user" {
-    user_name = "terraform"
+    user_name = "sahdev"
 }
 
 resource "aws_dynamodb_table" "state-locking" {
