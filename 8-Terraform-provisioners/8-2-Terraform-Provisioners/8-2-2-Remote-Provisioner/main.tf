@@ -24,12 +24,12 @@ resource "aws_instance" "ec2-webserver" {
 
 
 resource "aws_key_pair" "public-key" {
-    key_name = "sahdev-1-pub-key"
+    key_name = "terraform-1-pub-key"
     public_key = file("my-key.pub")
 }
 
 resource "aws_security_group" "ssh-access" {
-  name = "sahdev-1-ssh-access"
+  name = "terraform-1-ssh-access"
   description = "SSH access to web-server"
   ingress  {
     from_port = 22

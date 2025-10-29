@@ -14,7 +14,3 @@ resource "aws_instance" "web-server" {
     }
 }
 
-# terraform workspace list
-# terraform workspace new ProjectA
-# terraform workspace new ProjectB
-# terraform workspace select ProjectA

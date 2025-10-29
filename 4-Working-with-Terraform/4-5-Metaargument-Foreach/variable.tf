@@ -3,6 +3,6 @@ variable "filename" {
     #default = "a.txt"
     
     type = set(string)
-    default = ["d.txt", "e.txt"]
+    default = ["a.txt", "b.txt"]
 
 }

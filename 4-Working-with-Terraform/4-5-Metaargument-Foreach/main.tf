@@ -1,6 +1,6 @@
 resource "local_file" "pets" {
-  filename = each.value
+  filename = 
   content = "We love pets"
 
-  for_each = var.filename
+  #for_each = 
 }

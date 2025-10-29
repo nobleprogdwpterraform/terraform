@@ -6,7 +6,7 @@ provider "aws" {
 }
 
 data "aws_iam_user" "test-user" {
-    user_name="sahdev"
+    user_name="terraform"
 }
 
 
@@ -18,10 +18,12 @@ resource "aws_s3_bucket" "finance" {
 }
 
 
-
+/*
 
 resource "aws_s3_object" "upload" {
     bucket = aws_s3_bucket.finance.bucket
     key = "picture"
     source = "picture.jpeg"
 }
+
+*/

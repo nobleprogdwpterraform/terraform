@@ -10,7 +10,7 @@ resource "aws_instance" "ec2-server" {
     ami = "ami-0a716d3f3b16d290c"
 
     provisioner "local-exec" {
-        on_failure = fail # default behaviour
+      on_failure = fail 
       command = "echo EC2 server ${aws_instance.ec2-server.public_ip} created > temp/ip-address.txt"
     }
   

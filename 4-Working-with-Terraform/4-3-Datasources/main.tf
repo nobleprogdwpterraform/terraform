@@ -4,5 +4,5 @@ data "local_file" "os-version" {
 }
 
 output "content" {
-  value = data.local_file.os-version.content
+  
 }

@@ -5,13 +5,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "ec2-server" {
-   ami = "ami-0a716d3f3b16d290c"
-   instance_type = "t3.micro"
-   security_groups = ["launch-wizard-1"]
-   vpc_security_group_ids = ["sg-09209cbb58ce0d852"]
-   tags = {
-      Name = "-EC2-ServerSahdev"
-    }
+  
 }
 
 /*
