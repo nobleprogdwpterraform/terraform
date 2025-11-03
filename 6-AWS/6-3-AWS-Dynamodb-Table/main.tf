@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 data "aws_iam_user" "test-user" {
-    user_name = "terraform"
+    user_name = "terraform" # Replace terraform with your name (use lowercase)
 }
 
 

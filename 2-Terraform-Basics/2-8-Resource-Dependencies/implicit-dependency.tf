@@ -11,3 +11,7 @@ resource "random_pet" "pet" {
   separator = "."
 }
 
+
+# TODO: Fill in based on hints below:
+# Hint: Use expressions to construct filename dynamically using expression ${random_pet.pet.id}
+

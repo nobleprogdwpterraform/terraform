@@ -16,5 +16,14 @@ resource "aws_instance" "ec2-server" {
   
 }
 
-# terraform untaint aws_instance.ec2-server (to untaint a previously tainted resource)
-# terraform taint aws_instance.ec2-server (to taint a resource)
+#TODO: Fill in based on hints below:
+# Step 1: terraform apply
+# Step 2: terraform untaint aws_instance.ec2-server
+# Step 3: terraform plan
+# Step 4: terraform destroy
+# Step 5: replace on_failure=continue on line 13
+# Step 6: terraform apply
+# Step 7: terraform plan 
+# Step 8: terraform apply
+# Step 9: terraform taint aws_instance.ec2-server (to taint a resource manually)
+# Step 9: terraform destroy

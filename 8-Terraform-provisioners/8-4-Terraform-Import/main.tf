@@ -10,17 +10,19 @@ resource "aws_instance" "ec2-server" {
 
 /*
 resource "aws_instance" "ec2-server" {
-    ami = "ami-09a9858973b288bdd"
+    ami = "ami-0a716d3f3b16d290c"
     instance_type = "t3.micro"
-    security_groups = ["launch-wizard-2"]
-    vpc_security_group_ids = ["sg-096628c3ddb30f7aa"]
+    security_groups = [""] #Find in terraform.tfstate and place here
+    vpc_security_group_ids = [""] #Find in terraform.tfstate and place here
     tags = {
-      Name = "My-New-Web-Server"
+      Name = "" #Find in terraform.tfstate and place here
     }
 }
 */
 
-# i-019e41e593e686feb
-
-
-#terraform import aws_instance.ec2-server i-019e41e593e686feb (to import a resource under terraform)
+# Provision an EC2 Server manually using AWS management console
+# Note the unique Instance ID of the server
+# Initialize the working terraform directory: terraform init
+# Now run terraform import command: terraform import aws_instance.ec2-server <INSTANCE_ID>
+# Copy the required attributes from terraform.tfstate and place into the empty resource block
+# Destroy the resource: terraform destroy

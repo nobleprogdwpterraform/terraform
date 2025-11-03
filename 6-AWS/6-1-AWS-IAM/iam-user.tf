@@ -7,13 +7,13 @@ provider "aws" {
 
 
 resource "aws_iam_user" "test-user" {
-  name = "terraform"
+  name = "terraform" # Replace terraform with your name (use lowercase)
 } 
 
 
 /*
 resource "aws_iam_policy" "list-user-policy" {
-  name   = "terraform-ListUserPolicy"
+  name   = "terraform-ListUserPolicy" # Replace terraform with your name
   policy = <<EOF
 
 {

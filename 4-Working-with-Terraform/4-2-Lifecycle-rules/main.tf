@@ -1,9 +1,9 @@
 resource "local_file" "pets" {
   filename = "pets.txt"
-  content  = "new content with new value"
+  content  = "I love pets!"
   /*
   lifecycle { 
-    ignore_changes = [filename]
+    ignore_changes = [content]
   }
   */
 }

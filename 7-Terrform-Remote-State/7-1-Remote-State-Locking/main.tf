@@ -7,10 +7,16 @@ provider "aws" {
 
 /*
 terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "6.15.0"
+    }
+  }
   backend "s3" {
-    bucket = "terraform1234finance" 
+    bucket = "terraform1234finance" #Replace terraform with your name (use lowercase)
     key = "state/terraform.tfstate"
-    dynamodb_table = "terraform-state-locking"
+    dynamodb_table = "terraform-state-locking" #Replace terraform with your name (use lowercase)
     region = "eu-north-1"
     access_key = ""
     secret_key = ""
@@ -19,7 +25,7 @@ terraform {
 */
 
 data "aws_iam_user" "test-user" {
-    user_name = "terraform"
+    user_name = "terraform" #Replace terraform with your name (use lowercase)
 }
 
 resource "aws_dynamodb_table" "state-locking" {

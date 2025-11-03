@@ -7,7 +7,7 @@ provider "aws" {
 
 
 resource "aws_security_group" "example" {
-  name = "terraform_sg"
+  name = "terraform_sg" # Replace terraform with your name (use lowercase)
 
   dynamic "ingress" {
     for_each = var.ingress_rules
