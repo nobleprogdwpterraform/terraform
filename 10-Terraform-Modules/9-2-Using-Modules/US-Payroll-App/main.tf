@@ -1,8 +1,8 @@
 
 provider "aws" {
   region = "us-east-1"
-  access_key = "AKIA5CBDRLCA4UPUJAZ5"
-  secret_key = "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"
+  access_key = ""
+  secret_key = ""
 }
 
 module "US-Payroll-App" {
