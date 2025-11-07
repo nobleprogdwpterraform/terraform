@@ -24,12 +24,12 @@ resource "aws_instance" "ec2-webserver" {
 
 
 resource "aws_key_pair" "public-key" {
-    key_name = "sahdev-1-pub-key"
+    key_name = "nobleprog-1-pub-key"
     public_key = file("my-key.pub")
 }
 
 resource "aws_security_group" "ssh-access" {
-  name = "sahdev-1-ssh-access"
+  name = "nobleprog-1-ssh-access"
   description = "SSH access to web-server"
   ingress  {
     from_port = 22
@@ -47,6 +47,11 @@ resource "aws_security_group" "ssh-access" {
 }
 
 
-#ssh-keygen -b 4096 -t rsa -f my-key
-# ssh -i my-key ubuntu@51.20.84.109
-# cat /tmp/remote-prov.txt
+#TODO: Fill in based on hints below:
+# Step 1: Generate key pair using command: ssh-keygen -b 4096 -t rsa -f my-key
+# Step 2: replace names where
+# Step 3: terraform apply, note the value of public-ip varialbe in console output
+# Step 4: Connect to the EC2 Server using command: ssh -i my-key ubuntu@<IP_ADDRESS>
+# Step 5: Verify remote provisioner execution: cat /tmp/remote-prov.txt
+# Step 6: type exit and hit enter to logout from the remote server
+# Step 7: terraform destroy to destroy the server

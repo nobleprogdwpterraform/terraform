@@ -16,3 +16,7 @@ output "key" {
 output "filename" {
   value = local_file.my-key.filename
 }
+
+# TODO: Fill in based on hints below:
+# Hint: Use output block to show values after apply
+# Hint: Syntax => output "filename" { value = local_file.pets.filename }

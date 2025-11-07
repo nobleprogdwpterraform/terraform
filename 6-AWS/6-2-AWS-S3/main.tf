@@ -6,7 +6,7 @@ provider "aws" {
 }
 
 data "aws_iam_user" "test-user" {
-    user_name="sahdev"
+    user_name="nobleprog"
 }
 
 

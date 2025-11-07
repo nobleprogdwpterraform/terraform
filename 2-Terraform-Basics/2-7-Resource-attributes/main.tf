@@ -7,3 +7,6 @@ resource "local_file" "file" {
 resource "time_static" "timestamp" {
   
 }
+
+# TODO: Fill in based on hints below:
+# Hint: Use expressions to construct filename dynamically using expression ${time_static.timestamp.id}

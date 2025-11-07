@@ -8,9 +8,9 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "sahdev1234finance" 
+    bucket = "nobleprog1234finance" 
     key = "state/terraform.tfstate"
-    dynamodb_table = "sahdev-state-locking"
+    dynamodb_table = "nobleprog-state-locking"
     region = "eu-north-1"
     access_key = ""
     secret_key = ""
@@ -19,7 +19,7 @@ terraform {
 
 
 data "aws_iam_user" "test-user" {
-    user_name = "sahdev"
+    user_name = "nobleprog"
 }
 
 resource "aws_dynamodb_table" "state-locking" {

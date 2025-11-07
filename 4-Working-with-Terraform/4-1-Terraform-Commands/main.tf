@@ -12,8 +12,13 @@ output "filename" {
 /*
 Terraform commands:
 terraform init
+terraform init -upgrade
 terraform plan
 terraform apply
+
+terraform plan -out=infra.plan
+terraform show infra.plan
+terraform apply infra.plan
 
 terrafrom validate  (validates the configuration) 
 terraform fmt (formats the configuration)

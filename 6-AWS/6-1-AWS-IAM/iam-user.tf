@@ -7,13 +7,13 @@ provider "aws" {
 
 
 resource "aws_iam_user" "test-user" {
-  name = "sahdev"
+  name = "nobleprog"
 } 
 
 
 
 resource "aws_iam_policy" "list-user-policy" {
-  name   = "sahdev-ListUserPolicy"
+  name   = "nobleprog-ListUserPolicy"
   policy = <<EOF
 
 {
